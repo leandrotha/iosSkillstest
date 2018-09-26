@@ -41,7 +41,7 @@ Os requisitos mínimos/esperados para a entrega do desafio estão listados abaix
 		 Lista de Albums
 		
 	6 - Desenvolver uma tela para a Lista de Albums, contendo os seguintes campos:
-		 Utilizar um adaptar na lista, exibindo apenas o título e foto
+		 Título e foto.
 		
 Regras de Negócio
 	
