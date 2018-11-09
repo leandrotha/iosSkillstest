@@ -13,7 +13,7 @@ Os requisitos mínimos/esperados para a entrega do desafio estão listados abaix
 		- Conexão HTTP - REST
 		- Swift 4.2 / Objective C
 		- iOS 9+
-		- Device Compatibility: iPhone 7+ 
+		- Device Compatibility: iPhone 6+ 
 		- Storyboards
 		
 	2 - Desenvolver uma tela onde seja possível realizar o Login, contendo os seguintes campos:
