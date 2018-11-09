@@ -9,39 +9,39 @@ Realizar um Fork no repositório do projeto e ao finalizar o desenvolvimento do 
 Os requisitos mínimos/esperados para a entrega do desafio estão listados abaixo:
 
 	1 - Desenvolver uma aplicação utilizando os seguintes padrões:
-             - CoreData, Realm ou Sqllite
-             - Conexão HTTP - REST
-             - Swift 4.2 / Objective C
-             - iOS 9+
-             - Device Compatibility: iPhone 7+ 
-             - Storyboards
+		- CoreData, Realm ou Sqllite
+		- Conexão HTTP - REST
+		- Swift 4.2 / Objective C
+		- iOS 9+
+		- Device Compatibility: iPhone 7+ 
+		- Storyboards
 		
 	2 - Desenvolver uma tela onde seja possível realizar o Login, contendo os seguintes campos:
-	     - E-mail
-	     - Senha
-             - Botão para Entrar
-             - Link para a Tela de Cadastro
+		- E-mail
+		- Senha
+		- Botão para Entrar
+		- Link para a Tela de Cadastro
 		
 	3 - Desenvolver uma tela onde seja possível realizar o cadastro do usuário, persistindo na base local do APP, contendo os seguintes campos:
-	     - E-mail
-             - Nome
-	     - Senha
-             - Botão para Salvar
+		- E-mail
+             	- Nome
+	     	- Senha
+             	- Botão para Salvar
 		
 	4 - Desenvolver uma tela inicial, após o Login, onde seja possível visualizar as seguintes informações:
-	     - Nome do Usuário Logado
-	     - Lista de Usuários cadastrados na Aplicação
-	     - Possibilidade de filtrar a lista acima
-	     - Botão para Adicionar Novos Usuários, redirecionando para a tela do Passo 2
-	     - Botão para Editar Usuários, redirecionando para a tela do Passo 2
-	     - Botão para Excluir um Usuário, dando uma confirmação antes de realizar a ação
+	     	- Nome do Usuário Logado
+	     	- Lista de Usuários cadastrados na Aplicação
+	     	- Possibilidade de filtrar a lista acima
+	     	- Botão para Adicionar Novos Usuários, redirecionando para a tela do Passo 2
+	     	- Botão para Editar Usuários, redirecionando para a tela do Passo 2
+	     	- Botão para Excluir um Usuário, dando uma confirmação antes de realizar a ação
 		
 	5 - Na tela inicial, deve-se apresentar um Menu, com as opções:
-	     - Home
-	     - Lista de Albums
+	     	- Home
+	     	- Lista de Albums
 		
 	6 - Desenvolver uma tela para a Lista de Albums, contendo os seguintes campos:
-	     - Título e foto.
+	     	- Título e foto.
 		
 Regras de Negócio
 	
