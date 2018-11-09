@@ -24,9 +24,9 @@ Os requisitos mínimos/esperados para a entrega do desafio estão listados abaix
 		
 	3 - Desenvolver uma tela onde seja possível realizar o cadastro do usuário, persistindo na base local do APP, contendo os seguintes campos:
 		- E-mail
-             	- Nome
+		- Nome
 	     	- Senha
-             	- Botão para Salvar
+		- Botão para Salvar
 		
 	4 - Desenvolver uma tela inicial, após o Login, onde seja possível visualizar as seguintes informações:
 	     	- Nome do Usuário Logado
