@@ -8,21 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		033EDDFF22025A300030C88A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033EDDFE22025A300030C88A /* AppDelegate.swift */; };
-		033EDE0122025A300030C88A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033EDE0022025A300030C88A /* ViewController.swift */; };
-		033EDE0422025A300030C88A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 033EDE0222025A300030C88A /* Main.storyboard */; };
 		033EDE0622025A310030C88A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 033EDE0522025A310030C88A /* Assets.xcassets */; };
 		033EDE0922025A310030C88A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 033EDE0722025A310030C88A /* LaunchScreen.storyboard */; };
+		038A601B220263D40075CE53 /* StringExtesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038A601A220263D40075CE53 /* StringExtesion.swift */; };
+		038A601D220265130075CE53 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038A601C220265130075CE53 /* TextFieldExtension.swift */; };
+		038A6022220266780075CE53 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038A6021220266780075CE53 /* BaseViewController.swift */; };
+		038A6024220277930075CE53 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 038A6023220277930075CE53 /* LoginViewController.xib */; };
+		038A6028220279DE0075CE53 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038A6026220279DE0075CE53 /* CadastroViewController.swift */; };
+		038A6029220279DE0075CE53 /* CadastroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 038A6027220279DE0075CE53 /* CadastroViewController.xib */; };
+		03C0077322025D1500BF9EBC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C0077222025D1500BF9EBC /* User.swift */; };
+		03C0077B22025EB000BF9EBC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C0077A22025EB000BF9EBC /* LoginViewController.swift */; };
 		E97744944F1BBBE8F5C9E2DC /* Pods_IosSkillTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B8FDE5ACB74222C09F58C0 /* Pods_IosSkillTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		033EDDFB22025A300030C88A /* IosSkillTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IosSkillTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		033EDDFE22025A300030C88A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		033EDE0022025A300030C88A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		033EDE0322025A300030C88A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		033EDE0522025A310030C88A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		033EDE0822025A310030C88A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		033EDE0A22025A310030C88A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		038A601A220263D40075CE53 /* StringExtesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtesion.swift; sourceTree = "<group>"; };
+		038A601C220265130075CE53 /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
+		038A6021220266780075CE53 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		038A6023220277930075CE53 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		038A6026220279DE0075CE53 /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
+		038A6027220279DE0075CE53 /* CadastroViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CadastroViewController.xib; sourceTree = "<group>"; };
+		03C0077222025D1500BF9EBC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		03C0077A22025EB000BF9EBC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		21B8FDE5ACB74222C09F58C0 /* Pods_IosSkillTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IosSkillTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E27E4B4D6EA5DC22D7794F /* Pods-IosSkillTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosSkillTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-IosSkillTest/Pods-IosSkillTest.release.xcconfig"; sourceTree = "<group>"; };
 		E4A38B7BBE865D4473CD032F /* Pods-IosSkillTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosSkillTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IosSkillTest/Pods-IosSkillTest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -61,14 +72,83 @@
 		033EDDFD22025A300030C88A /* IosSkillTest */ = {
 			isa = PBXGroup;
 			children = (
-				033EDDFE22025A300030C88A /* AppDelegate.swift */,
-				033EDE0022025A300030C88A /* ViewController.swift */,
-				033EDE0222025A300030C88A /* Main.storyboard */,
-				033EDE0522025A310030C88A /* Assets.xcassets */,
-				033EDE0722025A310030C88A /* LaunchScreen.storyboard */,
-				033EDE0A22025A310030C88A /* Info.plist */,
+				038A6025220279C60075CE53 /* Cadastro */,
+				038A6020220266670075CE53 /* Base */,
+				03C0077822025E7100BF9EBC /* Application */,
+				03C0077722025E3C00BF9EBC /* Resources */,
+				03C0077622025E2E00BF9EBC /* Launch Screen */,
+				03C0077522025E1D00BF9EBC /* Login */,
+				03C0077422025E1100BF9EBC /* Extensions */,
+				03C0077122025CDD00BF9EBC /* Objects */,
 			);
 			path = IosSkillTest;
+			sourceTree = "<group>";
+		};
+		038A6020220266670075CE53 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				038A6021220266780075CE53 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		038A6025220279C60075CE53 /* Cadastro */ = {
+			isa = PBXGroup;
+			children = (
+				038A6026220279DE0075CE53 /* CadastroViewController.swift */,
+				038A6027220279DE0075CE53 /* CadastroViewController.xib */,
+			);
+			path = Cadastro;
+			sourceTree = "<group>";
+		};
+		03C0077122025CDD00BF9EBC /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				03C0077222025D1500BF9EBC /* User.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		03C0077422025E1100BF9EBC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				038A601A220263D40075CE53 /* StringExtesion.swift */,
+				038A601C220265130075CE53 /* TextFieldExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		03C0077522025E1D00BF9EBC /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				03C0077A22025EB000BF9EBC /* LoginViewController.swift */,
+				038A6023220277930075CE53 /* LoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		03C0077622025E2E00BF9EBC /* Launch Screen */ = {
+			isa = PBXGroup;
+			children = (
+				033EDE0722025A310030C88A /* LaunchScreen.storyboard */,
+			);
+			path = "Launch Screen";
+			sourceTree = "<group>";
+		};
+		03C0077722025E3C00BF9EBC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				033EDE0522025A310030C88A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		03C0077822025E7100BF9EBC /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				033EDDFE22025A300030C88A /* AppDelegate.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 		07D180EB2AD772E517079E15 /* Pods */ = {
@@ -150,7 +230,8 @@
 			files = (
 				033EDE0922025A310030C88A /* LaunchScreen.storyboard in Resources */,
 				033EDE0622025A310030C88A /* Assets.xcassets in Resources */,
-				033EDE0422025A300030C88A /* Main.storyboard in Resources */,
+				038A6024220277930075CE53 /* LoginViewController.xib in Resources */,
+				038A6029220279DE0075CE53 /* CadastroViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,22 +295,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				033EDE0122025A300030C88A /* ViewController.swift in Sources */,
+				03C0077B22025EB000BF9EBC /* LoginViewController.swift in Sources */,
+				038A601B220263D40075CE53 /* StringExtesion.swift in Sources */,
 				033EDDFF22025A300030C88A /* AppDelegate.swift in Sources */,
+				038A601D220265130075CE53 /* TextFieldExtension.swift in Sources */,
+				03C0077322025D1500BF9EBC /* User.swift in Sources */,
+				038A6028220279DE0075CE53 /* CadastroViewController.swift in Sources */,
+				038A6022220266780075CE53 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		033EDE0222025A300030C88A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				033EDE0322025A300030C88A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		033EDE0722025A310030C88A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -365,6 +443,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DL2AMM3ZF4;
 				INFOPLIST_FILE = IosSkillTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -384,6 +463,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DL2AMM3ZF4;
 				INFOPLIST_FILE = IosSkillTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

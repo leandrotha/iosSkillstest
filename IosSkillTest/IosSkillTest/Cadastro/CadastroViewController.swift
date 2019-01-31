@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CadastroViewController.swift
 //  IosSkillTest
 //
 //  Created by Leandro Bartsch Thá on 30/01/19.
@@ -8,13 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CadastroViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // Do any additional setup after loading the view.
     }
 
-
 }
-
