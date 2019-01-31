@@ -53,7 +53,7 @@ class LoginViewController: BaseViewController {
             
             if !email.isValidEmail() {
                 tfEmail.invalidate()
-                showAlert(message: "O emaiil informado é inválido!")
+                showAlert(message: "O email informado é inválido!")
                 
                 return
             }

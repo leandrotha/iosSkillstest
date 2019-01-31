@@ -14,8 +14,8 @@
 		038A601D220265130075CE53 /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038A601C220265130075CE53 /* TextFieldExtension.swift */; };
 		038A6022220266780075CE53 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038A6021220266780075CE53 /* BaseViewController.swift */; };
 		038A6024220277930075CE53 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 038A6023220277930075CE53 /* LoginViewController.xib */; };
-		038A6028220279DE0075CE53 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038A6026220279DE0075CE53 /* CadastroViewController.swift */; };
-		038A6029220279DE0075CE53 /* CadastroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 038A6027220279DE0075CE53 /* CadastroViewController.xib */; };
+		038A602C22027AAD0075CE53 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038A602A22027AAD0075CE53 /* CadastroViewController.swift */; };
+		038A602D22027AAD0075CE53 /* CadastroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 038A602B22027AAD0075CE53 /* CadastroViewController.xib */; };
 		03C0077322025D1500BF9EBC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C0077222025D1500BF9EBC /* User.swift */; };
 		03C0077B22025EB000BF9EBC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C0077A22025EB000BF9EBC /* LoginViewController.swift */; };
 		E97744944F1BBBE8F5C9E2DC /* Pods_IosSkillTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B8FDE5ACB74222C09F58C0 /* Pods_IosSkillTest.framework */; };
@@ -30,8 +30,8 @@
 		038A601C220265130075CE53 /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
 		038A6021220266780075CE53 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		038A6023220277930075CE53 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		038A6026220279DE0075CE53 /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
-		038A6027220279DE0075CE53 /* CadastroViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CadastroViewController.xib; sourceTree = "<group>"; };
+		038A602A22027AAD0075CE53 /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
+		038A602B22027AAD0075CE53 /* CadastroViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CadastroViewController.xib; sourceTree = "<group>"; };
 		03C0077222025D1500BF9EBC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		03C0077A22025EB000BF9EBC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		21B8FDE5ACB74222C09F58C0 /* Pods_IosSkillTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IosSkillTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,8 +95,8 @@
 		038A6025220279C60075CE53 /* Cadastro */ = {
 			isa = PBXGroup;
 			children = (
-				038A6026220279DE0075CE53 /* CadastroViewController.swift */,
-				038A6027220279DE0075CE53 /* CadastroViewController.xib */,
+				038A602A22027AAD0075CE53 /* CadastroViewController.swift */,
+				038A602B22027AAD0075CE53 /* CadastroViewController.xib */,
 			);
 			path = Cadastro;
 			sourceTree = "<group>";
@@ -231,7 +231,7 @@
 				033EDE0922025A310030C88A /* LaunchScreen.storyboard in Resources */,
 				033EDE0622025A310030C88A /* Assets.xcassets in Resources */,
 				038A6024220277930075CE53 /* LoginViewController.xib in Resources */,
-				038A6029220279DE0075CE53 /* CadastroViewController.xib in Resources */,
+				038A602D22027AAD0075CE53 /* CadastroViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +300,7 @@
 				033EDDFF22025A300030C88A /* AppDelegate.swift in Sources */,
 				038A601D220265130075CE53 /* TextFieldExtension.swift in Sources */,
 				03C0077322025D1500BF9EBC /* User.swift in Sources */,
-				038A6028220279DE0075CE53 /* CadastroViewController.swift in Sources */,
+				038A602C22027AAD0075CE53 /* CadastroViewController.swift in Sources */,
 				038A6022220266780075CE53 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

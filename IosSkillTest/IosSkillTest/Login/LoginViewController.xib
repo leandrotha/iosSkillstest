@@ -63,7 +63,7 @@
                     <rect key="frame" x="16" y="198.5" width="343" height="30"/>
                     <state key="normal" title="Não possuo cadastro"/>
                     <connections>
-                        <action selector="onClickCadastro:" destination="-1" eventType="touchUpInside" id="frI-H2-GYG"/>
+                        <action selector="onClickCadastroWithSender:" destination="-1" eventType="touchUpInside" id="mbn-Ty-imk"/>
                     </connections>
                 </button>
             </subviews>
