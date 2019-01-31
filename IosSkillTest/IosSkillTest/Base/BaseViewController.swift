@@ -32,4 +32,9 @@ class BaseViewController: UIViewController {
         
         navigationController?.present(alert, animated: true, completion: nil)
     }
+    
+    func handleDefaultError(_ error: Error) {
+        print(error.localizedDescription)
+        showAlert(message: "Algo de errado aconteceu, por favor, tente novamente mais tarde ):")
+    }
 }
