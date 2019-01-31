@@ -19,24 +19,33 @@ class LoginViewController: BaseViewController {
     //MARK: - Properties
     
     var realm: Realm!
+    var user: User?
+    var users: Results<User>
 
     //MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Login"
-        setupTextFields()
+        setupView()
     }
     
     //MARK: - View setup
     
-    func setupTextFields() {
+    func setupView() {
+        self.title = "Login"
+        
         tfPassword.isSecureTextEntry = true
         tfPassword.layer.cornerRadius = 4.0
         
         tfEmail.keyboardType = .emailAddress
         tfEmail.layer.cornerRadius = 4.0
+        
+        do {
+            realm = try Realm()
+        } catch let error {
+         //   handleDefaultError(error)
+        }
     }
     
     //MARK: - Actions
@@ -69,6 +78,7 @@ class LoginViewController: BaseViewController {
         }
         
         tfPassword.validate()
+        
     }
     
     
