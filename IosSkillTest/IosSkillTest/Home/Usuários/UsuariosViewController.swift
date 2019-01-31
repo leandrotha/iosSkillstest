@@ -7,8 +7,18 @@
 //
 
 import UIKit
+import RealmSwift
 
 class UsuariosViewController: BaseTableViewController {
+    
+    //MARK: - Properties
+    
+    var realm: Realm!
+    var users: Results<User> {
+        get {
+            return realm.objects(User.self)
+        }
+    }
     
     //MARK: - Lifecycle
     
@@ -21,9 +31,16 @@ class UsuariosViewController: BaseTableViewController {
     //MARK: - Setup
     
     func setupView() {
-        self.title = "Usuários"
+        let userName = AppDelegate.shared.getUser()?.name
         
+        self.title = "Olá, \(userName ?? "Bem-vindo!")"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: .logout)
+        
+        do {
+            realm = try Realm()
+        } catch let error {
+            handleDefaultError(error)
+        }
     }
     
     //MARK: - Methods
@@ -38,11 +55,23 @@ class UsuariosViewController: BaseTableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return users.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        
+        cell.textLabel?.text = users[indexPath.row].name
+        
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Usuários cadastrados"
     }
     
 }
