@@ -25,12 +25,6 @@ class BaseTableViewController: UITableViewController {
         return 0
     }
     
-    //MARK: - TableView
-    
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 40.0
-    }
-    
     //MARK: - Methods
     
     func showAlertWithCancel(message: String, title: String? = "Atenção!" , okHandler: Action? = nil, cancelHandler: Action? = nil) {

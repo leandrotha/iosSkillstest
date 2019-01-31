@@ -20,6 +20,7 @@ class CadastroViewController: BaseViewController {
     
     //MARK: - Properties
     
+    var userToEdit: User?
     var realm: Realm!
     var users: Results<User>? {
         get {
@@ -46,6 +47,12 @@ class CadastroViewController: BaseViewController {
         btnRegister.layer.borderWidth = 1.0
         btnRegister.layer.borderColor = UIColor.black.cgColor
         
+        if let _ = userToEdit {
+            tfEmail.isHidden = true
+            btnRegister.setTitle("Alterar", for: .normal)
+            self.title = "Editar"
+        }
+        
         do {
             realm = try Realm()
         } catch let error {
@@ -63,6 +70,34 @@ class CadastroViewController: BaseViewController {
         return true
     }
     
+    func initializeEditing(user: User) {
+        self.userToEdit = user
+    }
+    
+    func editUser(_ user: User) {
+        guard let usr = userToEdit, let email = usr.email else {
+            handleDefaultError(NSError())
+            return
+        }
+        
+        let editingUser = realm.objects(User.self).filter("email = %@", email)
+        
+        if let first = editingUser.first {
+            do {
+                try realm.write {
+                    first.name = user.name ?? ""
+                    first.password = user.password ?? ""
+                    
+                    showAlert(message: "Usuário atualizado com sucesso!", okHandler: { _ in
+                        self.navigationController?.popViewController(animated: true)
+                    })
+                }
+            } catch let error {
+                handleDefaultError(error)
+            }
+        }
+    }
+    
     //MARK: - Actions
     
     @IBAction func onClickCadastrar(_ sender: Any) {
@@ -77,7 +112,7 @@ class CadastroViewController: BaseViewController {
         
         tfName.validate()
         
-        if let email = tfEmail.text {
+        if let email = tfEmail.text, !tfEmail.isHidden {
             if email.isEmpty {
                 tfEmail.invalidate()
                 tfEmail.layer.borderColor = UIColor.red.cgColor
@@ -114,6 +149,11 @@ class CadastroViewController: BaseViewController {
         user.name = tfName.text
         user.password = tfPassword.text
         user.email = tfEmail.text
+        
+        if let _ = userToEdit {
+            self.editUser(user)
+            return
+        }
         
         do {
             try realm.write {
