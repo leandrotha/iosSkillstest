@@ -9,6 +9,8 @@
 import UIKit
 import RealmSwift
 
+fileprivate typealias Callback = (Bool, User)->()
+
 class LoginViewController: BaseViewController {
     
     //MARK: - Outlets
@@ -20,7 +22,11 @@ class LoginViewController: BaseViewController {
     
     var realm: Realm!
     var user: User?
-    var users: Results<User>
+    var users: Results<User> {
+        get {
+            return realm.objects(User.self)
+        }
+    }
 
     //MARK: - Lifecycle
     
@@ -44,8 +50,20 @@ class LoginViewController: BaseViewController {
         do {
             realm = try Realm()
         } catch let error {
-         //   handleDefaultError(error)
+            handleDefaultError(error)
         }
+    }
+    
+    //MARK: - Methods
+    
+    fileprivate func checkUser(email: String, password: String) -> Bool {
+        user = users.filter{$0.email == email}.first
+        
+        if let person = user, person.password == password {
+            return true
+        }
+        
+        return false
     }
     
     //MARK: - Actions
@@ -79,6 +97,13 @@ class LoginViewController: BaseViewController {
         
         tfPassword.validate()
         
+        if checkUser(email: tfEmail.text ?? "", password: tfPassword.text ?? "") {
+            AppDelegate.shared.setUser(user)
+            view.window?.rootViewController = TabBarController()
+            
+        } else {
+            showAlert(message: "Email ou senha inválido(s)!")
+        }
     }
     
     

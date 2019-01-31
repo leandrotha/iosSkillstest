@@ -16,6 +16,12 @@
 		038A6024220277930075CE53 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 038A6023220277930075CE53 /* LoginViewController.xib */; };
 		038A602C22027AAD0075CE53 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038A602A22027AAD0075CE53 /* CadastroViewController.swift */; };
 		038A602D22027AAD0075CE53 /* CadastroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 038A602B22027AAD0075CE53 /* CadastroViewController.xib */; };
+		038A60302202934A0075CE53 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038A602F2202934A0075CE53 /* TabBarController.swift */; };
+		038A6034220294180075CE53 /* UsuariosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038A6032220294180075CE53 /* UsuariosViewController.swift */; };
+		038A6035220294180075CE53 /* UsuariosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 038A6033220294180075CE53 /* UsuariosViewController.xib */; };
+		038A603A2202947E0075CE53 /* AlbunsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038A60382202947E0075CE53 /* AlbunsViewController.swift */; };
+		038A603B2202947E0075CE53 /* AlbunsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 038A60392202947E0075CE53 /* AlbunsViewController.xib */; };
+		038A603D22029CFC0075CE53 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038A603C22029CFC0075CE53 /* BaseTableViewController.swift */; };
 		03C0077322025D1500BF9EBC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C0077222025D1500BF9EBC /* User.swift */; };
 		03C0077B22025EB000BF9EBC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C0077A22025EB000BF9EBC /* LoginViewController.swift */; };
 		E97744944F1BBBE8F5C9E2DC /* Pods_IosSkillTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B8FDE5ACB74222C09F58C0 /* Pods_IosSkillTest.framework */; };
@@ -32,6 +38,12 @@
 		038A6023220277930075CE53 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		038A602A22027AAD0075CE53 /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
 		038A602B22027AAD0075CE53 /* CadastroViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CadastroViewController.xib; sourceTree = "<group>"; };
+		038A602F2202934A0075CE53 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		038A6032220294180075CE53 /* UsuariosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuariosViewController.swift; sourceTree = "<group>"; };
+		038A6033220294180075CE53 /* UsuariosViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsuariosViewController.xib; sourceTree = "<group>"; };
+		038A60382202947E0075CE53 /* AlbunsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbunsViewController.swift; sourceTree = "<group>"; };
+		038A60392202947E0075CE53 /* AlbunsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbunsViewController.xib; sourceTree = "<group>"; };
+		038A603C22029CFC0075CE53 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		03C0077222025D1500BF9EBC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		03C0077A22025EB000BF9EBC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		21B8FDE5ACB74222C09F58C0 /* Pods_IosSkillTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IosSkillTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +84,7 @@
 		033EDDFD22025A300030C88A /* IosSkillTest */ = {
 			isa = PBXGroup;
 			children = (
+				038A602E220292070075CE53 /* Home */,
 				038A6025220279C60075CE53 /* Cadastro */,
 				038A6020220266670075CE53 /* Base */,
 				03C0077822025E7100BF9EBC /* Application */,
@@ -88,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				038A6021220266780075CE53 /* BaseViewController.swift */,
+				038A603C22029CFC0075CE53 /* BaseTableViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -99,6 +113,35 @@
 				038A602B22027AAD0075CE53 /* CadastroViewController.xib */,
 			);
 			path = Cadastro;
+			sourceTree = "<group>";
+		};
+		038A602E220292070075CE53 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				038A60362202945B0075CE53 /* Albuns */,
+				038A6031220293F50075CE53 /* Usuários */,
+				038A602F2202934A0075CE53 /* TabBarController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		038A6031220293F50075CE53 /* Usuários */ = {
+			isa = PBXGroup;
+			children = (
+				038A6032220294180075CE53 /* UsuariosViewController.swift */,
+				038A6033220294180075CE53 /* UsuariosViewController.xib */,
+			);
+			name = "Usuários";
+			path = "Usuários";
+			sourceTree = "<group>";
+		};
+		038A60362202945B0075CE53 /* Albuns */ = {
+			isa = PBXGroup;
+			children = (
+				038A60382202947E0075CE53 /* AlbunsViewController.swift */,
+				038A60392202947E0075CE53 /* AlbunsViewController.xib */,
+			);
+			path = Albuns;
 			sourceTree = "<group>";
 		};
 		03C0077122025CDD00BF9EBC /* Objects */ = {
@@ -230,8 +273,10 @@
 			files = (
 				033EDE0922025A310030C88A /* LaunchScreen.storyboard in Resources */,
 				033EDE0622025A310030C88A /* Assets.xcassets in Resources */,
+				038A6035220294180075CE53 /* UsuariosViewController.xib in Resources */,
 				038A6024220277930075CE53 /* LoginViewController.xib in Resources */,
 				038A602D22027AAD0075CE53 /* CadastroViewController.xib in Resources */,
+				038A603B2202947E0075CE53 /* AlbunsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,11 +341,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				03C0077B22025EB000BF9EBC /* LoginViewController.swift in Sources */,
+				038A6034220294180075CE53 /* UsuariosViewController.swift in Sources */,
+				038A60302202934A0075CE53 /* TabBarController.swift in Sources */,
 				038A601B220263D40075CE53 /* StringExtesion.swift in Sources */,
 				033EDDFF22025A300030C88A /* AppDelegate.swift in Sources */,
 				038A601D220265130075CE53 /* TextFieldExtension.swift in Sources */,
 				03C0077322025D1500BF9EBC /* User.swift in Sources */,
+				038A603A2202947E0075CE53 /* AlbunsViewController.swift in Sources */,
 				038A602C22027AAD0075CE53 /* CadastroViewController.swift in Sources */,
+				038A603D22029CFC0075CE53 /* BaseTableViewController.swift in Sources */,
 				038A6022220266780075CE53 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
