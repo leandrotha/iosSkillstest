@@ -29,6 +29,23 @@ class BaseTableViewController: UITableViewController {
     
     //MARK: - Methods
     
+    func showAlertWithCancel(message: String, title: String? = "Atenção!" , okHandler: Action? = nil, cancelHandler: Action? = nil) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: okHandler ?? { action in
+            self.dismiss(animated: true, completion: nil)
+            })
+        
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: cancelHandler ?? { action in
+            self.dismiss(animated: true, completion: nil)
+            })
+        
+        alert.addAction(okAction)
+        alert.addAction(cancelAction)
+        
+        navigationController?.present(alert, animated: true, completion: nil)
+    }
+    
     func showAlert(message: String, title: String? = "Atenção!" , okHandler: Action? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         

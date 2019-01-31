@@ -23,14 +23,16 @@ class UsuariosViewController: BaseTableViewController {
     func setupView() {
         self.title = "Usuários"
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: .logout)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: .logout)
     }
     
     //MARK: - Methods
     
     @objc func logout() {
-        AppDelegate.shared.setUser(nil)
-        view.window?.rootViewController = UINavigationController(rootViewController: LoginViewController())
+        showAlertWithCancel(message: "Deseja mesmo sair?", okHandler: { _ in
+            AppDelegate.shared.setUser(nil)
+            self.view.window?.rootViewController = UINavigationController(rootViewController: LoginViewController())
+        })
     }
 
     // MARK: - Table view data source
