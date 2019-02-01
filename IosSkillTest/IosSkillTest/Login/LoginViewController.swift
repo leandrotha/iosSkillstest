@@ -31,6 +31,8 @@ class LoginViewController: BaseViewController {
     //MARK: - Lifecycle
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
         setupView()
     }
     

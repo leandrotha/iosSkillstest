@@ -32,7 +32,8 @@ class CadastroViewController: BaseViewController {
     //MARK: - Lifecycle
     
     override func viewDidLoad() {
-
+        super.viewDidLoad()
+        
         self.title = "Cadastro"
         setupView()
     }
@@ -152,9 +153,9 @@ class CadastroViewController: BaseViewController {
         
         tfPassword.validate()
         
-        user.name = tfName.text
+        user.name = tfName.text?.trim()
         user.password = tfPassword.text
-        user.email = tfEmail.text
+        user.email = tfEmail.text?.trim()
         
         if let _ = userToEdit {
             self.editUser(user)

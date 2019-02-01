@@ -17,6 +17,8 @@ class BaseTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = "FAFAFA".hexToColor()
+        
         setupView()
     }
 
