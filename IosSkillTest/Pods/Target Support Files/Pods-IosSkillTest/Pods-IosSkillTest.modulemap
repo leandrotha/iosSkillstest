@@ -1,0 +1,6 @@
+framework module Pods_IosSkillTest {
+  umbrella header "Pods-IosSkillTest-umbrella.h"
+
+  export *
+  module * { export * }
+}
