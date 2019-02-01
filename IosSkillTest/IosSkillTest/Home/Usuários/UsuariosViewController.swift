@@ -13,8 +13,10 @@ class UsuariosViewController: BaseTableViewController {
     
     //MARK: - Properties
     
+    var searchController: UISearchController!
     let loggedUser = AppDelegate.shared.getUser()
     var realm: Realm!
+    var searchList: [User]?
     var users: Results<User> {
         get {
             return realm.objects(User.self)
@@ -46,6 +48,16 @@ class UsuariosViewController: BaseTableViewController {
         } catch let error {
             handleDefaultError(error)
         }
+        
+        searchList = Array(users)
+        
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.sizeToFit()
+        
+        tableView.tableHeaderView = searchController.searchBar
+        definesPresentationContext = true
     }
     
     //MARK: - Methods
@@ -104,18 +116,17 @@ class UsuariosViewController: BaseTableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return users.count
+        guard let names = searchList else {return 0}
+        return names.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         
-        cell.textLabel?.text = users[indexPath.row].name
-        cell.accessoryType = .disclosureIndicator
+        guard let usr = searchList else {return UITableViewCell()}
         
-        if users[indexPath.row].email == loggedUser?.email {
-            cell.textLabel?.textColor = .green
-        }
+        cell.textLabel?.text = usr[indexPath.row].name
+        cell.accessoryType = .disclosureIndicator
         
         return cell
     }
@@ -132,12 +143,14 @@ class UsuariosViewController: BaseTableViewController {
     
     override func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction(style: .normal, title: "Deletar") { action, index in
-            self.deleteUser(self.users[index.row])
+            guard let usr = self.searchList else {return}
+            self.deleteUser(usr[index.row])
         }
         delete.backgroundColor = .red
         
         let edit = UITableViewRowAction(style: .normal, title: "Editar") { action, index in
-            self.editUserInfo(self.users[index.row])
+            guard let usr = self.searchList else {return}
+            self.editUserInfo(usr[index.row])
         }
         edit.backgroundColor = .blue
         
@@ -148,6 +161,19 @@ class UsuariosViewController: BaseTableViewController {
         return true
     }
     
+}
+
+extension UsuariosViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        if let searchUser = searchController.searchBar.text {
+            searchList = searchUser.isEmpty ? Array(users).map{$0} : Array(users).map{$0}.filter({(userName: User) -> Bool in
+                guard let name = userName.name else {return false}
+                return name.range(of: searchUser, options: .caseInsensitive) != nil
+            })
+            
+            tableView.reloadData()
+        }
+    }
 }
 
 fileprivate extension Selector {

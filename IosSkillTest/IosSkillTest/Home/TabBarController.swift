@@ -26,8 +26,11 @@ class TabBarController: UITabBarController {
         
         let secondVc = AlbunsViewController()
         secondVc.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
+        
+        let thirdVc = CadastroViewController()
+        thirdVc.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 2)
 
-        let controllers = [firstVc, secondVc]
+        let controllers = [firstVc, secondVc, thirdVc]
         
         viewControllers = controllers.map {UINavigationController(rootViewController: $0)}
     }
