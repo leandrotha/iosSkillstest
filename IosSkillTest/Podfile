@@ -10,5 +10,6 @@ target 'IosSkillTest' do
   pod 'RealmSwift'
   pod 'Alamofire'
   pod 'AlamofireImage'
+  pod 'IQKeyboardManagerSwift'
 
 end

@@ -134,13 +134,13 @@
 			isa = PBXGroup;
 			children = (
 				038A60362202945B0075CE53 /* Albuns */,
-				038A6031220293F50075CE53 /* Usuários */,
+				038A6031220293F50075CE53 /* Usuários */,
 				038A602F2202934A0075CE53 /* TabBarController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		038A6031220293F50075CE53 /* Usuários */ = {
+		038A6031220293F50075CE53 /* Usuários */ = {
 			isa = PBXGroup;
 			children = (
 				038A6032220294180075CE53 /* UsuariosViewController.swift */,
@@ -355,6 +355,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-IosSkillTest/Pods-IosSkillTest-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
@@ -364,6 +365,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
