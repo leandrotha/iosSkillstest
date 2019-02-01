@@ -28,6 +28,7 @@ class UsuariosViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        showAlert(message: "Você pode arrastar as células para o lado para ter mais opções (:", title: "Dica")
         setupView()
     }
     
@@ -38,9 +39,7 @@ class UsuariosViewController: BaseTableViewController {
     //MARK: - Setup
     
     func setupView() {
-        let userName = AppDelegate.shared.getUser()?.name
-        
-        self.title = "Olá, \(userName ?? "Bem-vindo!")"
+        self.title = "Usuários cadastrados"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: .logout)
         
         do {
@@ -55,6 +54,7 @@ class UsuariosViewController: BaseTableViewController {
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
         searchController.searchBar.sizeToFit()
+        searchController.searchBar.delegate = self
         
         tableView.tableHeaderView = searchController.searchBar
         definesPresentationContext = true
@@ -146,7 +146,8 @@ class UsuariosViewController: BaseTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Usuários cadastrados"
+        guard let user = loggedUser, let name = user.name else {return ""}
+        return "Olá, \(name)!"
     }
     
     //MARK: - Table view delegate
@@ -187,6 +188,13 @@ extension UsuariosViewController: UISearchResultsUpdating {
             
             tableView.reloadData()
         }
+    }
+}
+
+extension UsuariosViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        guard let txt = searchBar.text else {return true}
+        return txt.count <= 50
     }
 }
 

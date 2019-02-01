@@ -22,13 +22,13 @@ class TabBarController: UITabBarController {
     
     func setupTabBar() {
         let firstVc = UsuariosViewController()
-        firstVc.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 0)
+        firstVc.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
         
         let secondVc = AlbunsViewController()
         secondVc.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
         
         let thirdVc = CadastroViewController()
-        thirdVc.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 2)
+        thirdVc.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 2)
 
         let controllers = [firstVc, secondVc, thirdVc]
         
