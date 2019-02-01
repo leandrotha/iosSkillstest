@@ -91,6 +91,8 @@ class CadastroViewController: BaseViewController {
                     showAlert(message: "Usuário atualizado com sucesso!", okHandler: { _ in
                         self.navigationController?.popViewController(animated: true)
                     })
+                    
+                    self.view.reloadInputViews()
                 }
             } catch let error {
                 handleDefaultError(error)

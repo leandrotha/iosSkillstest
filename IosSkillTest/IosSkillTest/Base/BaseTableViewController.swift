@@ -10,6 +10,10 @@ import UIKit
 
 class BaseTableViewController: UITableViewController {
 
+    //MARK: - Properties
+    
+    var spinner: UIActivityIndicatorView = UIActivityIndicatorView(style: .gray)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,6 +30,25 @@ class BaseTableViewController: UITableViewController {
     }
     
     //MARK: - Methods
+    
+    func showSpinner() {
+        DispatchQueue.main.async {
+            self.spinner.center = CGPoint(x: UIScreen.main.bounds.width/2, y: UIScreen.main.bounds.height/2)
+            self.spinner.hidesWhenStopped = true
+            self.spinner.isHidden = false
+            
+            self.view.addSubview(self.spinner)
+            
+            self.spinner.startAnimating()
+        }
+    }
+    
+    func stopSpinner() {
+        DispatchQueue.main.async {
+            self.spinner.stopAnimating()
+            self.spinner.isHidden = true
+        }
+    }
     
     func showAlertWithCancel(message: String, title: String? = "Atenção!" , okHandler: Action? = nil, cancelHandler: Action? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -57,8 +80,10 @@ class BaseTableViewController: UITableViewController {
     }
     
     func handleDefaultError(_ error: Error) {
-        print(error.localizedDescription)
-        showAlert(message: "Algo de errado aconteceu, por favor, tente novamente mais tarde ):")
+        DispatchQueue.main.async {
+            print(error.localizedDescription)
+            self.showAlert(message: "Algo de errado aconteceu, por favor, tente novamente mais tarde ):")
+        }
     }
 
 }

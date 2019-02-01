@@ -69,6 +69,19 @@ class UsuariosViewController: BaseTableViewController {
         })
     }
     
+    func confirmActionDelete(_ user: User) {
+        guard let name = user.name else {
+            handleDefaultError(NSError())
+            return
+        }
+        
+        showAlertWithCancel(message: "Deseja realmente excluir o usuário \(name)?", okHandler: { _ in
+            self.deleteUser(user)
+        }, cancelHandler: { _ in
+            self.dismiss(animated: true, completion: nil)
+        })
+    }
+    
     func deleteUser(_ user: User) {
         guard let currentUser = loggedUser else {
             handleDefaultError(NSError())
@@ -98,6 +111,7 @@ class UsuariosViewController: BaseTableViewController {
         }
         
         showAlert(message: "Usuário deletado com sucesso!", okHandler: { _ in
+            self.searchList = Array(self.users)
             self.tableView.reloadData()
         })
     }
@@ -144,7 +158,7 @@ class UsuariosViewController: BaseTableViewController {
     override func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction(style: .normal, title: "Deletar") { action, index in
             guard let usr = self.searchList else {return}
-            self.deleteUser(usr[index.row])
+            self.confirmActionDelete(usr[index.row])
         }
         delete.backgroundColor = .red
         

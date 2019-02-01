@@ -22,8 +22,15 @@
 		038A603A2202947E0075CE53 /* AlbunsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038A60382202947E0075CE53 /* AlbunsViewController.swift */; };
 		038A603B2202947E0075CE53 /* AlbunsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 038A60392202947E0075CE53 /* AlbunsViewController.xib */; };
 		038A603D22029CFC0075CE53 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038A603C22029CFC0075CE53 /* BaseTableViewController.swift */; };
+		03BBB5C92203D00900DC34A6 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BBB5C82203D00900DC34A6 /* Parser.swift */; };
+		03BBB5CB2203D03E00DC34A6 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BBB5CA2203D03E00DC34A6 /* Album.swift */; };
 		03C0077322025D1500BF9EBC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C0077222025D1500BF9EBC /* User.swift */; };
 		03C0077B22025EB000BF9EBC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C0077A22025EB000BF9EBC /* LoginViewController.swift */; };
+		03DEBBB62203E76900C37A6A /* ImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DEBBB52203E76900C37A6A /* ImageViewExtension.swift */; };
+		03DEBBBA2203EA3400C37A6A /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DEBBB82203EA3400C37A6A /* AlbumCell.swift */; };
+		03DEBBBB2203EA3400C37A6A /* AlbumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03DEBBB92203EA3400C37A6A /* AlbumCell.xib */; };
+		03DEBBBE2203F2C400C37A6A /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DEBBBC2203F2C400C37A6A /* PhotoViewController.swift */; };
+		03DEBBBF2203F2C400C37A6A /* PhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03DEBBBD2203F2C400C37A6A /* PhotoViewController.xib */; };
 		E97744944F1BBBE8F5C9E2DC /* Pods_IosSkillTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B8FDE5ACB74222C09F58C0 /* Pods_IosSkillTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,8 +51,15 @@
 		038A60382202947E0075CE53 /* AlbunsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbunsViewController.swift; sourceTree = "<group>"; };
 		038A60392202947E0075CE53 /* AlbunsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbunsViewController.xib; sourceTree = "<group>"; };
 		038A603C22029CFC0075CE53 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		03BBB5C82203D00900DC34A6 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		03BBB5CA2203D03E00DC34A6 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		03C0077222025D1500BF9EBC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		03C0077A22025EB000BF9EBC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		03DEBBB52203E76900C37A6A /* ImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExtension.swift; sourceTree = "<group>"; };
+		03DEBBB82203EA3400C37A6A /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
+		03DEBBB92203EA3400C37A6A /* AlbumCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumCell.xib; sourceTree = "<group>"; };
+		03DEBBBC2203F2C400C37A6A /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		03DEBBBD2203F2C400C37A6A /* PhotoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoViewController.xib; sourceTree = "<group>"; };
 		21B8FDE5ACB74222C09F58C0 /* Pods_IosSkillTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IosSkillTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E27E4B4D6EA5DC22D7794F /* Pods-IosSkillTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosSkillTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-IosSkillTest/Pods-IosSkillTest.release.xcconfig"; sourceTree = "<group>"; };
 		E4A38B7BBE865D4473CD032F /* Pods-IosSkillTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IosSkillTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IosSkillTest/Pods-IosSkillTest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -84,6 +98,7 @@
 		033EDDFD22025A300030C88A /* IosSkillTest */ = {
 			isa = PBXGroup;
 			children = (
+				03BBB5C72203CFED00DC34A6 /* Parser */,
 				038A602E220292070075CE53 /* Home */,
 				038A6025220279C60075CE53 /* Cadastro */,
 				038A6020220266670075CE53 /* Base */,
@@ -138,16 +153,28 @@
 		038A60362202945B0075CE53 /* Albuns */ = {
 			isa = PBXGroup;
 			children = (
+				03DEBBB72203E9F800C37A6A /* Cell */,
 				038A60382202947E0075CE53 /* AlbunsViewController.swift */,
 				038A60392202947E0075CE53 /* AlbunsViewController.xib */,
+				03DEBBBC2203F2C400C37A6A /* PhotoViewController.swift */,
+				03DEBBBD2203F2C400C37A6A /* PhotoViewController.xib */,
 			);
 			path = Albuns;
+			sourceTree = "<group>";
+		};
+		03BBB5C72203CFED00DC34A6 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				03BBB5C82203D00900DC34A6 /* Parser.swift */,
+			);
+			path = Parser;
 			sourceTree = "<group>";
 		};
 		03C0077122025CDD00BF9EBC /* Objects */ = {
 			isa = PBXGroup;
 			children = (
 				03C0077222025D1500BF9EBC /* User.swift */,
+				03BBB5CA2203D03E00DC34A6 /* Album.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -157,6 +184,7 @@
 			children = (
 				038A601A220263D40075CE53 /* StringExtesion.swift */,
 				038A601C220265130075CE53 /* TextFieldExtension.swift */,
+				03DEBBB52203E76900C37A6A /* ImageViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -192,6 +220,15 @@
 				033EDDFE22025A300030C88A /* AppDelegate.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		03DEBBB72203E9F800C37A6A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				03DEBBB82203EA3400C37A6A /* AlbumCell.swift */,
+				03DEBBB92203EA3400C37A6A /* AlbumCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		07D180EB2AD772E517079E15 /* Pods */ = {
@@ -272,11 +309,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				033EDE0922025A310030C88A /* LaunchScreen.storyboard in Resources */,
+				03DEBBBF2203F2C400C37A6A /* PhotoViewController.xib in Resources */,
 				033EDE0622025A310030C88A /* Assets.xcassets in Resources */,
 				038A6035220294180075CE53 /* UsuariosViewController.xib in Resources */,
 				038A6024220277930075CE53 /* LoginViewController.xib in Resources */,
 				038A602D22027AAD0075CE53 /* CadastroViewController.xib in Resources */,
 				038A603B2202947E0075CE53 /* AlbunsViewController.xib in Resources */,
+				03DEBBBB2203EA3400C37A6A /* AlbumCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,15 +379,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03BBB5CB2203D03E00DC34A6 /* Album.swift in Sources */,
 				03C0077B22025EB000BF9EBC /* LoginViewController.swift in Sources */,
+				03DEBBBA2203EA3400C37A6A /* AlbumCell.swift in Sources */,
 				038A6034220294180075CE53 /* UsuariosViewController.swift in Sources */,
 				038A60302202934A0075CE53 /* TabBarController.swift in Sources */,
 				038A601B220263D40075CE53 /* StringExtesion.swift in Sources */,
 				033EDDFF22025A300030C88A /* AppDelegate.swift in Sources */,
 				038A601D220265130075CE53 /* TextFieldExtension.swift in Sources */,
 				03C0077322025D1500BF9EBC /* User.swift in Sources */,
+				03DEBBB62203E76900C37A6A /* ImageViewExtension.swift in Sources */,
 				038A603A2202947E0075CE53 /* AlbunsViewController.swift in Sources */,
+				03BBB5C92203D00900DC34A6 /* Parser.swift in Sources */,
 				038A602C22027AAD0075CE53 /* CadastroViewController.swift in Sources */,
+				03DEBBBE2203F2C400C37A6A /* PhotoViewController.swift in Sources */,
 				038A603D22029CFC0075CE53 /* BaseTableViewController.swift in Sources */,
 				038A6022220266780075CE53 /* BaseViewController.swift in Sources */,
 			);
