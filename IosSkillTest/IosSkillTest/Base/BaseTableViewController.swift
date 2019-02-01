@@ -16,7 +16,8 @@ class BaseTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        setupView()
     }
 
     // MARK: - Table view data source
@@ -30,6 +31,10 @@ class BaseTableViewController: UITableViewController {
     }
     
     //MARK: - Methods
+    
+    func setupView() {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: .logout)
+    }
     
     func showSpinner() {
         DispatchQueue.main.async {
@@ -85,5 +90,16 @@ class BaseTableViewController: UITableViewController {
             self.showAlert(message: "Algo de errado aconteceu, por favor, tente novamente mais tarde ):")
         }
     }
+    
+    @objc func logout() {
+        showAlertWithCancel(message: "Deseja mesmo sair?", okHandler: { _ in
+            AppDelegate.shared.setUser(nil)
+            self.view.window?.rootViewController = UINavigationController(rootViewController: LoginViewController())
+        })
+    }
 
+}
+
+fileprivate extension Selector {
+    static let logout = #selector(BaseTableViewController.logout)
 }

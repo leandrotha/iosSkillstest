@@ -20,6 +20,7 @@ class CadastroViewController: BaseViewController {
     
     //MARK: - Properties
     
+    var shouldSuper: Bool = false
     var userToEdit: User?
     var realm: Realm!
     var users: Results<User>? {
@@ -31,7 +32,6 @@ class CadastroViewController: BaseViewController {
     //MARK: - Lifecycle
     
     override func viewDidLoad() {
-        super.viewDidLoad()
 
         self.title = "Cadastro"
         setupView()
@@ -39,7 +39,11 @@ class CadastroViewController: BaseViewController {
     
     //MARK: - View setup
     
-    func setupView() {
+    override func setupView() {
+        if shouldSuper {
+            super.setupView()
+        }
+        
         tfPassword.isSecureTextEntry = true
         tfEmail.keyboardType = .emailAddress
         

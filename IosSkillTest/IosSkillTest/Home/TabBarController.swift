@@ -22,13 +22,14 @@ class TabBarController: UITabBarController {
     
     func setupTabBar() {
         let firstVc = UsuariosViewController()
-        firstVc.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
+        firstVc.tabBarItem = UITabBarItem(title: "Usuários", image: UIImage(named: "Users"), selectedImage: UIImage(named: "Users"))
         
         let secondVc = AlbunsViewController()
-        secondVc.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
+        secondVc.tabBarItem = UITabBarItem(title: "Álbuns", image: UIImage(named: "Albuns"), selectedImage: UIImage(named: "Albuns"))
         
         let thirdVc = CadastroViewController()
-        thirdVc.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 2)
+        thirdVc.tabBarItem = UITabBarItem(title: "Cadastro", image: UIImage(named: "Add Users"), selectedImage: UIImage(named: "Add Users"))
+        thirdVc.shouldSuper = true
 
         let controllers = [firstVc, secondVc, thirdVc]
         

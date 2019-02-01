@@ -10,21 +10,21 @@ import Foundation
 import UIKit
 import AlamofireImage
 
+let downloader = ImageDownloader(configuration: .default, downloadPrioritization: .fifo, maximumActiveDownloads: 5, imageCache: AutoPurgingImageCache())
+
 extension UIImageView {
+    
     func downloadImage(url: URL?) {
-        guard let requestUrl = url else {return}
+        guard let urlRequest = url else {return}
         
-        URLSession.shared.dataTask(with: requestUrl, completionHandler: {
-            data, respone, error in
-            if let err = error {
-                print(err.localizedDescription)
-            }
-            
-            if let imageData = data {
+        image = nil
+        
+        downloader.download(URLRequest(url: urlRequest)) { response in
+            if let image = response.result.value {
                 DispatchQueue.main.async {
-                    self.image = UIImage(data: imageData)
+                    self.image = image
                 }
             }
-        }).resume()
+        }
     }
 }

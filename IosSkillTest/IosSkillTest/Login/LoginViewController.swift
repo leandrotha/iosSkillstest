@@ -31,14 +31,12 @@ class LoginViewController: BaseViewController {
     //MARK: - Lifecycle
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-
         setupView()
     }
     
     //MARK: - View setup
     
-    func setupView() {
+    override func setupView() {
         self.title = "Login"
         
         tfPassword.isSecureTextEntry = true

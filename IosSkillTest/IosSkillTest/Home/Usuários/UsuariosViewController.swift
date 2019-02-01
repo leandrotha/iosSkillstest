@@ -29,7 +29,6 @@ class UsuariosViewController: BaseTableViewController {
         super.viewDidLoad()
 
         showAlert(message: "Você pode arrastar as células para o lado para ter mais opções (:", title: "Dica")
-        setupView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -38,9 +37,10 @@ class UsuariosViewController: BaseTableViewController {
     
     //MARK: - Setup
     
-    func setupView() {
+    override func setupView() {
+        super.setupView()
+        
         self.title = "Usuários cadastrados"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: .logout)
         
         do {
             realm = try Realm()
@@ -61,13 +61,6 @@ class UsuariosViewController: BaseTableViewController {
     }
     
     //MARK: - Methods
-    
-    @objc func logout() {
-        showAlertWithCancel(message: "Deseja mesmo sair?", okHandler: { _ in
-            AppDelegate.shared.setUser(nil)
-            self.view.window?.rootViewController = UINavigationController(rootViewController: LoginViewController())
-        })
-    }
     
     func confirmActionDelete(_ user: User) {
         guard let name = user.name else {
@@ -152,6 +145,10 @@ class UsuariosViewController: BaseTableViewController {
     
     //MARK: - Table view delegate
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 60.0
     }
@@ -196,8 +193,4 @@ extension UsuariosViewController: UISearchBarDelegate {
         guard let txt = searchBar.text else {return true}
         return txt.count <= 50
     }
-}
-
-fileprivate extension Selector {
-    static let logout = #selector(UsuariosViewController.logout)
 }

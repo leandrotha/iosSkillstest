@@ -22,13 +22,14 @@ class AlbunsViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupView()
         fetchAlbuns()
     }
     
     //MARK: - Methods
     
-    func setupView() {
+    override func setupView() {
+        super.setupView()
+        
         self.title = "Álbuns"
         tableView.register(UINib(nibName: "AlbumCell", bundle: nil), forCellReuseIdentifier: reuse)
     }
